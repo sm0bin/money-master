@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main class="p-5 lg:p-12">
+        <h1 class="text-center font-bold text-5xl text-blue-500 mb-9">Money Master💰</h1>
+        <div class="grid grid-cols-2 gap-12">
+            <div class="">
+                <img class="w-full" src="./images/Pexels Photo by Karolina Grabowska.png" alt="">
+            </div>
+
+            <!-- Contents -->
+            <div class="bg-blue-100 text-gray-700 p-14 flex flex-col items-center justify-center text-xl font-medium">
+                <h2 class="font-semibold text-2xl text-center mb-8">Income</h2>
+
+                <div class="w-5/12">
+                    <div class="flex items-center justify-end gap-4">
+                        <label for="income">Income:</label>
+                        <input type="number" name="income" id="income" class="p-3 rounded-sm focus:outline-blue-500"
+                            min="0">
+                    </div>
+
+                    <h2 class="font-semibold text-2xl text-center my-8">Expenses</h2>
+
+                    <div class="flex items-center justify-end gap-4 mb-5">
+                        <label for="food">Food:</label>
+                        <input type="number" name="food" id="food" class="p-3 rounded-sm focus:outline-blue-500"
+                            min="0">
+                    </div>
+
+                    <div class="flex items-center justify-end gap-4 mb-5">
+                        <label for="rent">Rent:</label>
+                        <input type="number" name="rent" id="rent" class="p-3 rounded-sm focus:outline-blue-500"
+                            min="0">
+                    </div>
+
+                    <div class="flex items-center justify-end gap-4 mb-5">
+                        <label for="clothes">Clothes:</label>
+                        <input type="number" name="clothes" id="clothes" class="p-3 rounded-sm focus:outline-blue-500"
+                            min="0">
+                    </div>
+                </div>
+
+                <button id="calculate-btn"
+                    class="bg-blue-500 hover:bg-blue-600 text-white py-4 px-14 font-bold rounded mx-auto text-center">Calculate</button>
+
+                <h2 class="font-semibold text-2xl text-center mt-8">Total Expenses: <span id="total-expense">0.00</span>
+                </h2>
+                <h2 class="font-semibold text-2xl text-center my-8">Balance: <span id="balance">0.00</span></h2>
+
+                <div class="flex items-center gap-4">
+                    <label for="save">Save:</label>
+                    <input type="number" name="save" id="save" class="p-3 rounded-sm focus:outline-blue-500" min="0">
+
+                    <span>%</span>
+                    <button id="save-btn"
+                        class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-14 font-bold rounded mx-auto text-center">Save</button>
+                </div>
+
+                <h2 class="font-semibold text-2xl text-center my-8">Saving Amount: <span id="saving-amount">0.00</span>
+                </h2>
+                <h2 class="font-semibold text-2xl text-center">Remaining Balance: <span
+                        id="remaining-balance">0.00</span></h2>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <!-- Script -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
